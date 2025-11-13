@@ -1,4 +1,4 @@
-/* --- Global Styles --- */
+  /* --- Global Styles --- */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
@@ -53,7 +53,7 @@ nav {
 
 nav a {
     color: white;
-    margin: 0 25px;
+    margin: 0 15px;
     padding: 15px 0;
     display: inline-block;
     text-decoration: none;
@@ -80,6 +80,7 @@ h3 {
     margin-top: 25px;
     border-left: 5px solid #0073e6;
     padding-left: 10px;
+    font-size: 1.4em;
 }
 
 /* --- Lists and Links --- */
@@ -89,13 +90,27 @@ ul {
 }
 
 ul li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.4;
 }
 
 .project-list li strong {
     font-size: 1.1em;
     color: #004d99;
+}
+
+.presentations-list li {
+    padding-left: 15px;
+    position: relative;
+}
+
+.presentations-list li::before {
+    content: "•";
+    color: #ffcc00;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 a {
@@ -109,21 +124,49 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- CV Download Button --- */
-.download-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #0073e6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-    transition: background-color 0.3s, transform 0.2s;
+/* --- Detail Blocks (Experience, Education, References) --- */
+.role-details {
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 5px;
 }
 
-.download-button:hover {
-    background-color: #004d99;
-    transform: translateY(-2px);
-    text-decoration: none;
+.experience-item, .education-item, .reference-item {
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+}
+
+/* --- Technological Abilities Grid --- */
+.abilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.abilities-grid ul {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.abilities-grid ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.abilities-grid ul li::before {
+    content: "✓";
+    color: #0073e6;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
